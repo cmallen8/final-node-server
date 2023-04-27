@@ -1,8 +1,17 @@
 import watchedModel from "./watched-model.js";
 
-export const userWatchedShow = async (userId, showId) => {
-    return await watchedModel.create({ userId, showId });
+/*
+export const createWatched = async (watched) => {
+    const newWatch = await watchedModel.create({ watched });
+    return newWatch;
 };
+
+ */
+
+export const userWatchedShow = async (userId, showId) => {
+    const status = await watchedModel.create({userId, showId});
+    return status;
+}
 
 export const userUnWatchedShow = async (userId, showId) => {
     const status = await watchedModel.deleteOne({userId, showId});
@@ -17,3 +26,11 @@ export const findWatchesByUserId = async (userId) => {
 export const findUserIdByWatchesId = async (showId) => {
     return await watchedModel.find({ showId });
 };
+
+/*
+export const findUserAndShow = async (userId, showId) => {
+    const show = await watchedModel.findOne({ userId, showId });
+    return show;
+};
+
+ */

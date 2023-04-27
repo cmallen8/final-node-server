@@ -9,9 +9,7 @@ const usersSchema = new mongoose.Schema({
         type: String,
         required: true},
     userType: {
-        type: String,
-        default: "INDIVIDUAL",
-        enum: ['INDIVIDUAL', 'FAMILY']},
+        type: String},
     firstName: String,
     lastName: String,
         isAdmin: { type: Boolean, default: false },

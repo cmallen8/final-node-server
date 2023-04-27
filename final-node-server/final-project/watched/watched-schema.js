@@ -3,7 +3,7 @@ const watchedSchema = new mongoose.Schema(
     {
         userId: String,
         showId: String,
-        imageName: String,
+        poster_path: String,
         showName: String
     },
     {collection: "watched"}

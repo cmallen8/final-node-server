@@ -3,6 +3,8 @@ const playlistedSchema = new mongoose.Schema(
     {
         userId: String,
         showId: String,
+        poster_path: String,
+        showName: String,
     },
     {collection: "playlisted"}
 );
